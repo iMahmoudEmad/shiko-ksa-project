@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PL - KSA</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -18,11 +19,11 @@
     <div class="overlay"></div>
     <!-- Start Nav -->
     <nav>
-      <h1>
+      <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="200">
         <img src="./images/logo.png" alt="" class="logo">
       </h1>
 
-      <ul class="list-unstyled ml-auto">
+      <ul class="list-unstyled ml-auto" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
         <li>
           <a href="tel:+966505426035">
             <i class="fa fa-whatsapp"></i>
@@ -52,13 +53,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
           <div class="header--description">
             <h2>different modes applications</h2>
           </div> <!-- .header--description -->
         </div> <!-- .col-md-6 -->
         <div class="col-md-6"></div> <!-- .col-md-6 -->
-        <button class="btn btn-lg btn-primary">
+        <button class="btn btn-lg btn-primary" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
           <a href="#">explore more</a>
         </button>
       </div> <!-- .row -->
@@ -71,7 +72,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="who--content">
+          <div class="who--content" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200">
             <h2 class="who--content__title">
               Who we are..
             </h2>
@@ -91,7 +92,7 @@
           <div class="who--content">
             <div class="row">
               <div class="col-md-6">
-                <div class="who--content__child">
+                <div class="who--content__child" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200">
                   <img src="./images/logo.png" alt="Title Here" class="who--content__child--picture">
                   <h2 class="who--content__child--title">
                     Title Here
@@ -104,7 +105,7 @@
                 </div> <!-- .who--content__child -->
               </div> <!-- .col-md-6 -->
               <div class="col-md-6">
-                <div class="who--content__child">
+                <div class="who--content__child" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                   <img src="./images/logo.png" alt="Title Here" class="who--content__child--picture">
                   <h2 class="who--content__child--title">
                     Title Here
@@ -130,7 +131,7 @@
 
   <!-- Start Services -->
   <section class="services">
-    <div class="container">
+    <div class="container" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
       <h2 class="title text-center">Our Services</h2>
       <p class="description text-center">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam fugit suscipit, sapiente odio aliquam nostrum
@@ -197,7 +198,7 @@
 
   <!-- Start How to work -->
   <section class="how text-center">
-    <div class="container">
+    <div class="container" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="500">
       <h2 class="title">How it work</h2>
       <div class="row">
         <div class="col-md-4">
@@ -237,7 +238,7 @@
 
   <!-- Start Contact -->
   <section class="contact text-center">
-    <div class="container">
+    <div class="container" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
       <h2 class="title">Start your project with us</h2>
       <p class="description">
         We think big. We thrive on the impossible, embrace the insurmountable, and defy expectations at every turn.
@@ -293,8 +294,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <textarea name="" id="" cols="30" rows="10" class="form-control"
-                    placeholder="Tell us about your project or idea"></textarea>
+                  <textarea name="" class="form-control" placeholder="Tell us about your project or idea"></textarea>
                 </div> <!-- .form-group -->
               </div> <!-- .col-md-12 -->
             </div> <!-- .row -->
@@ -310,7 +310,7 @@
 
   <!-- Start Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="500">
       <div class="footer-box">
         <h2 class="title text-center">GET IN TOUCH WITH US</h2>
         <div class="row">
@@ -361,10 +361,15 @@
       });
     }
   </script>
+  <script src="./js/jquery.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkv6JiZ8wolnQ0ViaJrAr9pgQhiBPjl9o&callback=initMap"
     async defer></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

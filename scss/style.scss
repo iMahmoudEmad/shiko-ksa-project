@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Gudea-Bold;
+  src: url('./../fonts/Gudea-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Gudea-Regular;
+  src: url('./../fonts/Gudea-Regular.ttf');
+  font-weight: 500;
+}
+
+* {
+  font-family: Gudea-Regular;
+}
+
 section,
 footer {
   padding: 10rem 0;
@@ -9,7 +25,7 @@ footer {
 
   .title {
     font-size: 3rem;
-    font-weight: 700;
+    font-family: Gudea-Bold;
     margin-bottom: 1.5rem;
   }
 
@@ -21,9 +37,9 @@ footer {
 
 .section-header {
   background: url('./../images/sections/1.png') right center no-repeat, url('./../images/sections/2.png') left center no-repeat;
-  background-size: 300px 300px;
+  background-size: 35% 15rem;
   padding: 5rem 0;
-  background-color: lighten(#9fa3a7, 35%);
+  background-color: #FAFAFA;
 }
 
 #map1,
@@ -76,7 +92,7 @@ header {
       text-transform: capitalize;
       text-decoration: none;
       font-size: .9rem;
-      font-weight: 700;
+      font-family: Gudea-Bold;
     }
   }
 }
@@ -87,8 +103,8 @@ nav {
   justify-content: space-between;
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     position: relative;
   }
 
@@ -146,7 +162,7 @@ nav {
     &__title {
       font-size: 3rem;
       margin-bottom: 1.5rem;
-      font-weight: 700;
+      font-family: Gudea-Bold;
       text-transform: capitalize;
     }
 
@@ -169,7 +185,7 @@ nav {
       &--title {
         font-size: 1.5rem;
         margin-bottom: .5rem;
-        font-weight: 700;
+        font-family: Gudea-Bold;
         text-transform: capitalize;
       }
 
@@ -211,7 +227,7 @@ nav {
 
       &--title {
         font-size: 1.5rem;
-        font-weight: 700;
+        font-family: Gudea-Bold;
       }
 
       &--description {
@@ -230,14 +246,29 @@ nav {
     margin-bottom: 5rem;
   }
 
+  .col-md-4:last-of-type &--content:before {
+    display: none;
+  }
+
   &--content {
     padding: 0 3rem;
     margin-bottom: 2rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 90%;
+      height: 4px;
+      background-color: #00adee;
+      position: absolute;
+      top: 1.8rem;
+      left: 60%;
+    }
 
     &__number,
     &__title {
       margin-bottom: 1.5rem;
-      font-weight: 700;
+      font-family: Gudea-Bold;
     }
 
     &__number {
@@ -288,7 +319,7 @@ nav {
   }
 
   .contact--content {
-    width: 100%;
+    width: 80%;
     margin-top: 4rem;
     margin-right: auto;
     margin-left: auto;
@@ -300,6 +331,7 @@ nav {
 
     .form-control {
       background-color: #fafafa;
+      height: 60px;
       border: 1px solid #e6e6e6;
       color: #9fa3a7;
       resize: none;
@@ -315,10 +347,14 @@ nav {
       }
     }
 
+    textarea.form-control {
+      height: 300px;
+    }
+
     .btn {
       background-color: #0096cd;
       text-transform: uppercase;
-      font-weight: 700;
+      font-family: Gudea-Bold;
       font-size: .9rem;
       padding: .7rem 3rem;
       margin-top: 2rem;
@@ -362,11 +398,23 @@ nav {
   }
 
   &--content {
+    padding: 0 1rem;
+
     &__title {
       font-size: 1.5rem;
-      font-weight: 700;
+      font-family: Gudea-Bold;
       margin-bottom: 2rem;
       text-transform: capitalize;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 4px;
+        height: 100%;
+        background-color: #0096cd;
+        position: absolute;
+        left: -1rem;
+      }
     }
 
     ul li {
@@ -398,15 +446,16 @@ nav {
       flex: 0 0 100%;
 
       img {
-        width: 50%;
+        width: 80%;
+        height: 20vh;
         margin: 0 auto;
         display: block;
-        height: 100px;
       }
     }
 
     ul {
-      top: 120px;
+      width: 100%;
+      top: 150px;
       flex: 0 0 100%;
       z-index: 999;
 
@@ -420,6 +469,10 @@ nav {
         }
       }
     }
+  }
+
+  .how--content:before {
+    display: none;
   }
 
   .footer {

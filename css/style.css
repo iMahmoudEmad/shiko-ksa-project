@@ -1,3 +1,17 @@
+@font-face {
+  font-family: Gudea-Bold;
+  src: url("./../fonts/Gudea-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Gudea-Regular;
+  src: url("./../fonts/Gudea-Regular.ttf");
+  font-weight: 500;
+}
+* {
+  font-family: Gudea-Regular;
+}
+
 section,
 footer {
   padding: 10rem 0;
@@ -11,7 +25,7 @@ footer .description {
 section .title,
 footer .title {
   font-size: 3rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
   margin-bottom: 1.5rem;
 }
 section .description,
@@ -22,9 +36,9 @@ footer .description {
 
 .section-header {
   background: url("./../images/sections/1.png") right center no-repeat, url("./../images/sections/2.png") left center no-repeat;
-  background-size: 300px 300px;
+  background-size: 35% 15rem;
   padding: 5rem 0;
-  background-color: #fcfcfc;
+  background-color: #FAFAFA;
 }
 
 #map1,
@@ -73,7 +87,7 @@ header .btn a {
   text-transform: capitalize;
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
 }
 
 nav {
@@ -81,8 +95,8 @@ nav {
   justify-content: space-between;
 }
 nav img {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   position: relative;
 }
 nav ul {
@@ -130,7 +144,7 @@ nav ul li img {
 .who--content__title {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
   text-transform: capitalize;
 }
 .who--content__description {
@@ -150,7 +164,7 @@ nav ul li img {
 .who--content__child--title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
   text-transform: capitalize;
 }
 .who--content__child--description {
@@ -183,7 +197,7 @@ nav ul li img {
 }
 .services--content__data--title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
 }
 .services--content__data--description {
   font-size: 0.9rem;
@@ -197,13 +211,26 @@ nav ul li img {
 .how .title {
   margin-bottom: 5rem;
 }
+.col-md-4:last-of-type .how--content:before {
+  display: none;
+}
 .how--content {
   padding: 0 3rem;
   margin-bottom: 2rem;
+  position: relative;
+}
+.how--content:before {
+  content: "";
+  width: 90%;
+  height: 4px;
+  background-color: #00adee;
+  position: absolute;
+  top: 1.8rem;
+  left: 60%;
 }
 .how--content__number, .how--content__title {
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
 }
 .how--content__number {
   display: inline-block;
@@ -246,7 +273,7 @@ nav ul li img {
   font-size: 1rem;
 }
 .contact .contact--content {
-  width: 100%;
+  width: 80%;
   margin-top: 4rem;
   margin-right: auto;
   margin-left: auto;
@@ -258,6 +285,7 @@ nav ul li img {
 }
 .contact .contact--content .form-control {
   background-color: #fafafa;
+  height: 60px;
   border: 1px solid #e6e6e6;
   color: #9fa3a7;
   resize: none;
@@ -270,10 +298,13 @@ nav ul li img {
   outline: none;
   box-shadow: none;
 }
+.contact .contact--content textarea.form-control {
+  height: 300px;
+}
 .contact .contact--content .btn {
   background-color: #0096cd;
   text-transform: uppercase;
-  font-weight: 700;
+  font-family: Gudea-Bold;
   font-size: 0.9rem;
   padding: 0.7rem 3rem;
   margin-top: 2rem;
@@ -310,11 +341,23 @@ nav ul li img {
   border-radius: 0.5rem;
   margin: auto;
 }
+.footer--content {
+  padding: 0 1rem;
+}
 .footer--content__title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-family: Gudea-Bold;
   margin-bottom: 2rem;
   text-transform: capitalize;
+  position: relative;
+}
+.footer--content__title:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #0096cd;
+  position: absolute;
+  left: -1rem;
 }
 .footer--content ul li {
   color: #898989;
@@ -338,13 +381,14 @@ nav ul li img {
     flex: 0 0 100%;
   }
   nav h1 img {
-    width: 50%;
+    width: 80%;
+    height: 20vh;
     margin: 0 auto;
     display: block;
-    height: 100px;
   }
   nav ul {
-    top: 120px;
+    width: 100%;
+    top: 150px;
     flex: 0 0 100%;
     z-index: 999;
   }
@@ -355,6 +399,10 @@ nav ul li img {
   }
   nav ul li a {
     text-decoration: none;
+  }
+
+  .how--content:before {
+    display: none;
   }
 
   .footer-box {
