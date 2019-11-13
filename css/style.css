@@ -51,7 +51,7 @@ footer .description {
 header {
   background-image: url("./../images/contact.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
   position: relative;
   color: #fff;
@@ -66,8 +66,8 @@ header .header--description {
   margin-top: 3rem;
 }
 header .header--description h2 {
-  font-size: 5rem;
-  font-weight: 900;
+  font-size: 7rem;
+  font-family: Gudea-Bold;
   text-transform: uppercase;
   color: #0096cd;
   margin-bottom: 2rem;
@@ -95,8 +95,7 @@ nav {
   justify-content: space-between;
 }
 nav img {
-  width: 400px;
-  height: 400px;
+  width: 50%;
   position: relative;
 }
 nav ul {
@@ -353,7 +352,7 @@ nav ul li img {
 }
 .footer--content__title:before {
   content: "";
-  width: 4px;
+  width: 5px;
   height: 100%;
   background-color: #0096cd;
   position: absolute;

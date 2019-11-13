@@ -53,7 +53,7 @@ footer {
 header {
   background-image: url('./../images/contact.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
   position: relative;
   color: #fff;
@@ -69,11 +69,12 @@ header {
     margin-top: 3rem;
 
     h2 {
-      font-size: 5rem;
-      font-weight: 900;
+      font-size: 7rem;
+      font-family: Gudea-Bold;
       text-transform: uppercase;
       color: #0096cd;
       margin-bottom: 2rem;
+      // padding-right: 5rem;
     }
   }
 
@@ -103,8 +104,8 @@ nav {
   justify-content: space-between;
 
   img {
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    // height: 50%;
     position: relative;
   }
 
@@ -409,7 +410,7 @@ nav {
 
       &:before {
         content: '';
-        width: 4px;
+        width: 5px;
         height: 100%;
         background-color: #0096cd;
         position: absolute;
