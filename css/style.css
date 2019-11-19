@@ -12,6 +12,10 @@
   font-family: Gudea-Regular;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section,
 footer {
   padding: 10rem 0;
@@ -32,13 +36,18 @@ section .description,
 footer .description {
   font-size: 1rem;
   color: #9fa3a7;
+  width: 70%;
+  margin: auto;
 }
 
 .section-header {
-  background: url("./../images/sections/1.png") right center no-repeat, url("./../images/sections/2.png") left center no-repeat;
-  background-size: 35% 15rem;
-  padding: 5rem 0;
-  background-color: #FAFAFA;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.section-header img {
+  width: 35%;
+  height: 220px;
 }
 
 #map1,
@@ -49,7 +58,7 @@ footer .description {
 }
 
 header {
-  background-image: url("./../images/contact.png");
+  background-image: url("./../images/header.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -193,6 +202,7 @@ nav ul li img {
 }
 .services--content__data {
   padding: 1rem;
+  min-height: 375px;
 }
 .services--content__data--title {
   font-size: 1.5rem;
@@ -218,8 +228,7 @@ nav ul li img {
   margin-bottom: 2rem;
   position: relative;
 }
-.how--content:before {
-  content: "";
+.how--content .line {
   width: 90%;
   height: 4px;
   background-color: #00adee;
@@ -248,7 +257,7 @@ nav ul li img {
 }
 
 .contact {
-  background-image: url("./../images/contact.png");
+  background-image: url("./../images/project.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -365,6 +374,19 @@ nav ul li img {
 }
 
 @media (max-width: 768px) {
+  .section-header {
+    display: none;
+  }
+
+  section .description,
+footer .description {
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
   header .header--description {
     margin-top: 12rem;
   }
@@ -398,10 +420,6 @@ nav ul li img {
   }
   nav ul li a {
     text-decoration: none;
-  }
-
-  .how--content:before {
-    display: none;
   }
 
   .footer-box {

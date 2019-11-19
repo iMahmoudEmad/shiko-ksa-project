@@ -14,6 +14,10 @@
   font-family: Gudea-Regular;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section,
 footer {
   padding: 10rem 0;
@@ -32,14 +36,23 @@ footer {
   .description {
     font-size: 1rem;
     color: #9fa3a7;
+    width: 70%;
+    margin: auto;
   }
 }
 
 .section-header {
-  background: url('./../images/sections/1.png') right center no-repeat, url('./../images/sections/2.png') left center no-repeat;
-  background-size: 35% 15rem;
-  padding: 5rem 0;
-  background-color: #FAFAFA;
+  // background: url('./../images/sections/1.png') right center no-repeat, url('./../images/sections/2.png') left center no-repeat;
+  // background-size: 35% 15rem;
+  display: flex;
+  justify-content: space-between;
+  // padding: 5rem 0;
+  background-color: #fff;
+
+  img {
+    width: 35%;
+    height: 220px;
+  }
 }
 
 #map1,
@@ -51,7 +64,7 @@ footer {
 
 //Start Header
 header {
-  background-image: url('./../images/contact.png');
+  background-image: url('./../images/header.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -225,6 +238,7 @@ nav {
 
     &__data {
       padding: 1rem;
+      min-height: 375px;
 
       &--title {
         font-size: 1.5rem;
@@ -256,8 +270,7 @@ nav {
     margin-bottom: 2rem;
     position: relative;
 
-    &:before {
-      content: '';
+    .line {
       width: 90%;
       height: 4px;
       background-color: #00adee;
@@ -294,7 +307,7 @@ nav {
 
 // Start Contact
 .contact {
-  background-image: url('./../images/contact.png');
+  background-image: url('./../images/project.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -427,6 +440,19 @@ nav {
 }
 
 @media(max-width:768px) {
+  .section-header {
+    display: none;
+  }
+
+  section .description,
+  footer .description {
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
   header {
     .header--description {
       margin-top: 12rem;
@@ -470,10 +496,6 @@ nav {
         }
       }
     }
-  }
-
-  .how--content:before {
-    display: none;
   }
 
   .footer {
